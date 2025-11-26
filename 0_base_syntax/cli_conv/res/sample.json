@@ -1,1 +1,25 @@
-{"id": 1,"name": "Valentin","email": "v@example.com","age": 30,"tags": ["go", "student"]}
+[
+{
+    "id": 1,
+    "name": "Valentin",
+    "email": "v@example.com",
+    "age": 30,
+    "tags": ["go", "student"]
+},
+
+{
+    "id": 2,
+    "name": "John",
+    "email": "j@example.com",
+    "age": 25,
+    "tags": ["python", "developer"]
+},
+
+{
+    "id": 3,
+    "name": "Jane",
+    "email": "j@example.com",
+    "age": 20,
+    "tags": ["javascript", "designer"]
+}
+]
