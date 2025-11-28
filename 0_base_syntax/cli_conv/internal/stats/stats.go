@@ -39,13 +39,13 @@ func GetUsersList(users []model.User) {
 	}
 }
 
-func UserWithTag(users []model.User) ([]model.User, error) {
+func UserWithTag(users []model.User) []model.User {
 	var tag string
 	fmt.Println("Enter a tag:")
 	fmt.Scanln(&tag)
 	if tag == "" {
-		fmt.Println("Invalid tag")
-		return nil, errors.New("invalid tag")
+		err := errors.New("invalid tag")
+		panic(err)
 	}
 	var userWithTag []model.User
 	for _, user := range users {
@@ -54,7 +54,8 @@ func UserWithTag(users []model.User) ([]model.User, error) {
 		}
 	}
 	if len(userWithTag) == 0 {
-		return nil, errors.New("no users with tag")
+		err := errors.New("no users with tag")
+		panic(err)
 	}
 	fmt.Println("Users with tag:", tag)
 	for _, user := range userWithTag {
@@ -65,5 +66,5 @@ func UserWithTag(users []model.User) ([]model.User, error) {
 		fmt.Println("Tags: ", user.Tags)
 		fmt.Println("--------------------------------")
 	}
-	return userWithTag, nil
+	return userWithTag
 }
